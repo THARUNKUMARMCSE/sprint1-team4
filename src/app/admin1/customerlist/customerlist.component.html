@@ -1,0 +1,42 @@
+<p>customerlist works!</p>
+<app-menu></app-menu>
+<a class="btn btn-primary mb-3" (click)="addCustomer()" style="background-color:darkorchid;color: white;">Add New Customer</a>
+<h1 class="center">Customers</h1>
+<div class="container row">
+  <div class="col-md-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Address</th>
+          <th>Phone no.</th>
+          <th>Email</th>
+          <th>   </th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rest of customers">
+          <td>{{rest.customerid}}</td>
+          <td>{{rest.firstname}}</td>
+          <td>{{rest.lastname}}</td>
+          <td>{{rest.address.city}}</td>
+          <td>{{rest.phoneno}}</td>
+          <td>{{rest.email}}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="deleteCustomer(rest.customerid)" style="background-color:darkorchid;color: white;">Delete</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="updateCustomer(rest.customerid)" style="background-color:darkorchid;color: white;">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <app-addcustomer *ngIf="action === 'add'" [customer]="selectedCustomer" (custAddedEvent)="getAllCustomers()"></app-addcustomer>
+    <app-updatecustomer *ngIf="action === 'update'" [customer]="selectedCustomer" (custUpdatedEvent)="getAllCustomers()"></app-updatecustomer>
+  </div>
+  </div>

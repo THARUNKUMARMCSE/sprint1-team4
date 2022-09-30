@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div class="row">
+       <div class="tile">
+         <div class="login show">
+         <!--img src="https://previews.123rf.com/images/luka007/luka0071601/luka007160100985/50665073-add-book-icon.jpg" class="logo"-->
+         <h6>Update Quantity</h6>
+<form class="form">
+<!--label for="itemid">Item Id</label>
+  <input type="text" class="form-control" id="itemid" placeholder="Item id" [(ngModel)]="item.itemid" name="itemid"-->
+
+  <label for="itemname">Quantity</label>
+  <input type="text" class="form-control" id="itemname" placeholder="Quantity" [(ngModel)]="cartitem.quantity" name="itemname">
+
+  <br>
+  <button type="button" class="btn btn-success" style="background-color:rgb(51, 66, 80);color: white" (click)="updateItem()">Update</button>
+</form>
+         </div>
+        </div>
+      </div>
+  </div>
+
+

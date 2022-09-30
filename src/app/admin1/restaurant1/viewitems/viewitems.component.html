@@ -1,0 +1,21 @@
+<p>viewitems works!</p>
+<p>view-items works!</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Item Name</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items">
+            <td>{{item.itemid}}</td>
+            <td>{{item.itemname}}</td>
+            <td>
+              <button type="button" class="btn btn-outline-success" (click)="deleteItem(item.itemid)" style="background-color:darkorchid;color: white;">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+

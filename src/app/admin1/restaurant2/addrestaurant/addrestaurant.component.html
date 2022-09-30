@@ -1,0 +1,29 @@
+<h1>Add Restaurant Admin</h1>
+<div class="container">
+  <div class="row">
+     <div class="col-sm-offset-3 col-sm-6">
+       <div class="tile">
+         <div class="login show">
+         <!--img src="https://previews.123rf.com/images/luka007/luka0071601/luka007160100985/50665073-add-book-icon.jpg" class="logo"-->
+         <h6>Add Restaurant</h6>
+<form class="form">
+  <label for="name">Restaurant Name</label>
+  <input type="text" class="form-control" id="name" placeholder="Restaurant Name" [(ngModel)]="restaurant.restaurantName" name="name">
+
+  <label for="addressid">Address Id</label>
+  <input type="text" class="form-control" id="addressid" placeholder="addressid" name="addressid" [(ngModel)]="restaurant.address.addressid">
+
+  <label for="managerName">managerName</label>
+  <input type="text" class="form-control" id="managerName" placeholder="managerName" name="managerName" [(ngModel)]="restaurant.managerName">
+
+  <label for="contactNumber">Contact no.</label>
+  <input type="text" class="form-control" id="contactNumber" placeholder="contactNumber" name="contactNumber" [(ngModel)]="restaurant.contactNumber">
+
+  <br>
+  <button type="button" class="btn btn-success" (click)="saveRest()">Save Restaurant</button>
+</form>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>

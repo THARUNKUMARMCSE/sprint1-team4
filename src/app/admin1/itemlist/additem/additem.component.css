@@ -1,0 +1,179 @@
+.container
+{
+  padding:60px 40px;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://previews.123rf.com/images/vicu9/vicu91801/vicu9180100705/94398848-picture-blurred-for-background-abstract-blur-food-in-restaurant.jpg');
+  background-size: cover;
+  margin: auto;
+  width: 100%;
+}
+.tile
+{
+  display:inline-block;
+  /*width: 200%;*/
+  background-color:#fff;
+  box-shadow:0px 0px 10px 3px rgba(0,0,0,0.1);
+  position:relative;
+  overflow:hidden;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 75%;
+}
+a:focus,a:hover
+{
+  text-decoration: none;
+}
+a
+{
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0px;
+}
+.control{
+    opacity: 100%;
+}
+.form-control
+{
+  border-radius: 0px;
+  height: 40px;
+  opacity: 100%;
+}
+.btn
+{
+  border-radius: 0px;
+  margin: 10px;
+  padding: 3px;
+  line-height: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: darkorchid;
+}
+.signup
+{
+  position: absolute;
+  top: 20px;
+  right: -67%;
+  overflow: hidden;
+  transform: rotate(90deg);
+  padding: 20px 20px 20px 60px;
+  transition: all .5s ease-out;
+}
+.login
+{
+  position: absolute;
+  top: 20px;
+  left: -67%;
+  overflow: hidden;
+  transform: rotate(-90deg);
+  padding: 20px 60px 20px 20px;
+  transition: all .5s ease-out;
+}
+.btn-signup
+{
+  border-radius: 0px;
+  position: absolute;
+  right: -179px;
+  top: 179px;
+  width: 400px;
+  transform: rotate(90deg);
+  text-decoration:line-through;
+}
+.show
+{
+  position: relative!important;
+  width: 100%;
+  top: auto;
+  left: auto;
+  right: 0px;
+  transform: rotate(-0deg);
+  transition: all .5s ease-out;
+}
+.login.show
+{
+  left: 0;
+  right: auto;
+}
+.btn-login
+{
+  border-radius: 0px;
+  position: absolute;
+  left: -150px;
+  top: 185px;
+  width: 400px;
+  transform: rotate(90deg);
+  text-decoration:line-through;
+}
+.soc
+{
+  text-align: center;
+  margin: 20px 0px;
+}
+.soc a
+{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  border:1px solid #ddd;
+  border-radius: 50%;
+  margin: 5px;
+  transition: all .5s;
+}
+.soc a.fa-facebook
+{
+  border-color: #4E71A8;
+  color: #4E71A8;
+}
+.soc a.fa-twitter
+{
+  border-color: #1CB7EB;
+  color: #1CB7EB;
+}
+.soc a.fa-linkedin
+{
+  border-color: #1686B0;
+  color: #1686B0;
+}
+.soc a:hover
+{
+  transform: rotate(360deg);
+}
+.logo
+{
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0px auto 60px;
+}
+@media (max-width:100%)
+{.container{max-width:540px};
+.tile{max-width: 400px;}
+}
+
+@media (min-width:1200px)
+{.container{max-width:540px};
+.tile{max-width:max-content;}}
+
+.col-sm-offset-3{
+  width: 40%;
+}
+
+@media (max-width:1200px)
+{
+.col-sm-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 70%;
+    max-width: 100%;
+}
+}
+.col-sm-6{
+position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }

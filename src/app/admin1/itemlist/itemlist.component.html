@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<h1 class="center">Items Admin</h1>
+<a class="btn btn-primary mb-3" (click)="addItem()" style="background-color:darkorchid;color: white;">Add New Item</a>
+<div class="container row">
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Item Name</th>
+          <th>Category id</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{item.itemid}}</td>
+          <td>{{item.itemname}}</td>
+          <td>{{item.category.catid}}</td>
+          <td>{{item.category.catname}}</td>
+          <td>{{item.cost}}</td>
+          <td>
+            <button type="button" class="btn btn-primary"  style="background-color:darkorchid;color: white;" (click)="updateItem(item.itemid)"> Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6" >
+    <app-additem *ngIf="action === 'add'" [item]="selectedItem" (itemAddedEvent)="getItemsDetails()"></app-additem>
+    <app-updateitem *ngIf="action==='update'" [item]="selectedItem" (itemUpdatedEvent)="getItemsDetails()"></app-updateitem>
+  </div>
+</div>
+
+
+

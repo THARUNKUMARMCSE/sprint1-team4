@@ -1,0 +1,35 @@
+<h1>Add Customer</h1>
+<div class="container">
+  <div class="row">
+     <div class="col-sm-offset-3 col-sm-6">
+       <div class="tile">
+         <div class="login show">
+         <!--img src="https://previews.123rf.com/images/luka007/luka0071601/luka007160100985/50665073-add-book-icon.jpg" class="logo"-->
+         <h6>Add Customer</h6>
+<form class="form">
+  <label for="name">First Name</label>
+  <input type="text" class="form-control" id="name" placeholder="FirstName" [(ngModel)]="customer.firstname" name="name">
+
+  <label for="lastname">LastName</label>
+  <input type="text" class="form-control" id="lastname" placeholder="LastName" name="lastname" [(ngModel)]="customer.lastname">
+
+  <label for="email">Email</label>
+  <input type="text" class="form-control" id="email" placeholder="email" name="email" [(ngModel)]="customer.email">
+
+  <label for="pass">Password</label>
+  <input type="text" class="form-control" id="pass" placeholder="password" name="pass" [(ngModel)]="customer.password">
+
+  <label for="address">Address</label>
+  <input type="text" class="form-control" id="address" placeholder="address" name="address" [(ngModel)]="customer.address.addressid">
+
+  <label for="no">Contact</label>
+  <input type="text" class="form-control" id="no" placeholder="contactNumber" name="no" [(ngModel)]="customer.phoneno">
+
+  <br>
+  <button type="button" class="btn btn-success" (click)="saveCustomer()">Save Customer</button>
+</form>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,103 @@
+<app-customerdashboard></app-customerdashboard>
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6aHTWnJvT4CvZhfJb4PrOmoKO9G8ajdqEtK-Cw-NyMPYU8cebdNoMqJ4-Dno9c6ntgnw&usqp=CAU);">
+<!--h1 class="center">FoodCart</h1-->
+<div id="content">
+  <img src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif" class="ribbon"/>
+  <div><h1 class="logo" style="position:relative; left: 120px; top: 30px;">Food Cart</h1></div>
+</div>
+
+<br><br>
+<div class="container row" style="background-color:beige ;">
+  <div class="col-md-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th> cart ID</th>
+          <th>item id</th>
+          <th>item name</th>
+          <th>Price</th>
+          <th>item quantity</th>
+          <th>subtotal</th>
+          <th> </th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rest of cartitems">
+          <td>{{rest.cartid}}</td>
+          <td>{{rest.item.itemid}}</td>
+          <td>{{rest.item.itemname}}</td>
+          <td>{{rest.item.cost}}</td>
+          <td>{{rest.quantity}}<td>
+          <td>{{subtotal}}</td>
+          <!--td>{{rest.customer.customerid}}</td-->
+          <td>
+            <button type="button" class="btn btn-primary" (click)="deletefromcart(rest.item.itemid)"  style="background-color:rgb(51, 66, 80);color: white">Delete</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary"   style="background-color:rgb(51, 66, 80);color: white" (click)="updateItem(rest.cartid)">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4" style="padding-left: 0px ;margin-left: 380px;">
+    <button type="button" class="btn btn-outline-success" (click)="clearcart()"  style="background-color:rgb(51, 66, 80);color: white">Clear Cart</button>
+    <button type="button" class="btn btn-outline-success" (click)="placeorder()"  style="background-color:rgb(51, 66, 80);color: white"> Place Order</button>
+    <app-updatequant *ngIf="action === 'update'" [cartitem]="selectedItem" (cartEvent)="getFoodCartDetails()"></app-updatequant>
+    <h3>{{order}}</h3>
+</div>
+</div>
+</body>
+
+
+<!--body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6aHTWnJvT4CvZhfJb4PrOmoKO9G8ajdqEtK-Cw-NyMPYU8cebdNoMqJ4-Dno9c6ntgnw&usqp=CAU);">
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     
+   </head>
+   
+   <div id="content">
+       <img src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif" class="ribbon"/>
+       <div><h1 class="logo" style="position:relative; left: 120px; top: 30px;">Food Cart</h1></div>
+   </div>
+   
+     <br><br>
+<div class="container" style="background-color:beige ;">
+ <div class="col-md-6">
+   <div class="table-responsive">
+   <table class="table">
+     <thead>
+       <tr>
+         <th> cart ID</th>
+         <th>item id</th>
+         <th>item name</th>
+         <th>item quantity</th>
+         <th> </th>
+       </tr>
+     </thead>
+     <tbody>
+      <tr *ngFor="let rest of cartitems">
+         <td>{{rest.cartid}}</td>
+         <td>{{rest.item.itemid}}</td>
+         <td>{{rest.item.itemname}}</td>
+         <td>{{rest.quantity}}<td>-->
+         <!--td>{{rest.customer.customerid}}</td>
+       < <td>
+           <button type="button" class="btn btn-primary" (click)="deletefromcart(rest.item.itemid)" style="background-color:rgb(51, 66, 80);color: white;">Delete Item</button>
+         </td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+ <div class="col-md-4" style="padding-left: 100px ;margin-left: 100px;">
+   <--<button type="button" class="btn btn-outline-success" (click)="clearcart()" style="background-color:rgb(51, 66, 80);color: white">Clear Cart</button>-->
+   <!--app-addbook *ngIf="action === 'add'" [book]="selectedBook" (bookAddedEvent)="refreshData()"></app-addbook-->
+   <!--app-viewbook *ngIf="action === 'view'" [book]="selectedBook" (bookDeletedEvent)="refreshData()"></app-viewbook>
+</div>
+</div>
+</div>
+</body-->

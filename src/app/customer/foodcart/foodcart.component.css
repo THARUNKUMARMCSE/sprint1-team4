@@ -1,0 +1,33 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: 0.3;
+  }
+  
+    
+    .logo {
+      font-size: 30px;
+      font-style: italic;
+      color: snow;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    #content {
+        position: relative;
+    }
+    #content img {
+        position: absolute;
+        width: 7%;
+        height: 130%;
+        top: 25px;
+        right: 90px;
+    }

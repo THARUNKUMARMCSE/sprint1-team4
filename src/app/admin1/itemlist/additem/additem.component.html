@@ -1,0 +1,29 @@
+<h1>Add Item Admin</h1>
+<div class="container">
+  <div class="row">
+     <div class="col-sm-offset-3 col-sm-6">
+       <div class="tile">
+         <div class="login show">
+         <!--img src="https://previews.123rf.com/images/luka007/luka0071601/luka007160100985/50665073-add-book-icon.jpg" class="logo"-->
+         <h6>Add Item</h6>
+<form class="form">
+  <label for="itemname">Item Name</label>
+  <input type="text" class="form-control" id="itemname" placeholder="Item Name" [(ngModel)]="item.itemname" name="itemname">
+
+  <label for="catid">Category Id</label>
+  <input type="text" class="form-control" id="catid" placeholder="categoryId" name="catid" [(ngModel)]="item.category.catid">
+
+  <label for="catname">Category Name</label>
+  <input type="text" class="form-control" id="catname" placeholder="categoryName" name="catname" [(ngModel)]="item.category.catname">
+
+  <label for="cost">Cost</label>
+  <input type="text" class="form-control" id="cost" placeholder="cost" name="cost" [(ngModel)]="item.cost">
+
+  <br>
+  <button type="button" class="btn btn-success" (click)="saveItem()">Save Item</button>
+</form>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>

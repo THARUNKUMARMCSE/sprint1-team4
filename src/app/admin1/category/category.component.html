@@ -1,0 +1,57 @@
+<app-menu> </app-menu>
+<!--a class="btn btn-primary mb-3" (click)="addCategory()" style="background-color:darkorchid;color: white;">Add New Category</a>
+<h1 class="center">Categories</h1>
+<div class="container row">
+  <div class="col-md-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>CategoryName</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rest of category">
+          <td>{{rest.catid}}</td>
+          <td>{{rest.catname}}</td>
+          <td>
+            <button type="button" class="btn btn-primary"  style="background-color:darkorchid;color: white;" (click)="deleteCategory(rest.catid)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4" style="padding-left: 100px ;margin-left: 50px;">
+    <app-addcategory *ngIf="action === 'add'" [category]="selectedCat" (catAddedEvent)="getAllCategories()"></app-addcategory>
+</div>
+  </div-->
+  <body style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnatxHUFbKYToI85gornz_QlQhsCUr6JpQEw&usqp=CAU) ;">
+    <a class="btn btn-primary mb-3" (click)="addCategory()" style="background-color:rgb(51, 66, 80);color: floralwhite;font-style: italic; font-size: small;">Add New Category</a>
+    <h1 class="center">Categories</h1>
+    <div class="container row" style="background-color:beige ;">
+      <div class="col-md-6">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>CategoryName</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let rest of category">
+              <td>{{rest.catid}}</td>
+              <td>{{rest.catname}}</td>
+              <td>
+                <button type="button" class="btn btn-primary"  style="background-color:rgb(51, 66, 80);color: floralwhite;font-style: italic; font-size: small;" (click)="deleteCategory(rest.catid)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-4" style="padding-left: 0px ;margin-left: 0px;">
+        <app-addcategory *ngIf="action === 'add'" [category]="selectedCat" (catAddedEvent)="getAllCategories()"></app-addcategory>
+    </div>
+      </div>
+    </body>

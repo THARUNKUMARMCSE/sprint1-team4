@@ -1,0 +1,41 @@
+<p>restaurant2 works!</p>
+<app-menu> </app-menu>
+<p><b>note:</b>to delete restaurant please clear all items from restaurants</p>
+<a class="btn btn-primary mb-3" (click)="addRestaurant()" style="background-color:darkorchid;color: white;">Add New Restaurant</a>
+<h1 class="center">Restaurants</h1>
+<div class="container row">
+  <div class="col-md-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Restaurant Name</th>
+          <th>Address</th>
+          <th>Manager name</th>
+          <th>Contact no.</th>
+          <th>   </th>
+          <th>  </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rest of restaurants">
+          <td>{{rest.restaurantId}}</td>
+          <td>{{rest.restaurantName}}</td>
+          <td>{{rest.address.city}}</td>
+          <td>{{rest.managerName}}</td>
+          <td>{{rest.contactNumber}}</td>
+          <td>
+            <button type="button" class="btn btn-primary"  style="background-color:darkorchid;color: white;" (click)="deleteRestaurant(rest.restaurantId)">Delete</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary"  style="background-color:darkorchid;color: white;" (click)="updateRestaurant(rest.restaurantId)">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4" style="padding-left: 100px ;margin-left: 100px;">
+    <app-addrestaurant *ngIf="action === 'add'" [restaurant]="selectedRestaurant" (restAddedEvent)="getRestaurantDetails()"></app-addrestaurant>
+    <app-updaterestaurant *ngIf="action === 'update'" [restaurant]="selectedRestaurant" (restUpdatedEvent)="getRestaurantDetails()"></app-updaterestaurant>
+</div>
+</div>
